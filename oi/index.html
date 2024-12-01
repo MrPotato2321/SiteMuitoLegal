@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div>
+        <h3>Login</h3>
+        <input type="text" placeholder="Login" id="login">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="submit" id="enviar" onclick="logar(); return false">
+    <div>
+    
+        <script>
+            function logar() {
+                var login = document.getElementById('login').value;
+                var senha = document.getElementById('senha').value;
+        
+                // Dados de login e senha válidos
+                const dados = {
+                    "andre": "andre",
+                    "joao": "joao",
+                    "joaquim": "joaquim",
+                    "edvaldo": "edvaldo",
+                    "guilherme": "guilherme"
+                };
+        
+                // Verifica se o login existe e se a senha é correta
+                if (dados[login] && dados[login] === senha) {
+                    alert('Login realizado com sucesso!');
+                    location.href = "home.html";
+                } else {
+                    alert('Usuário ou senha incorretos');
+                }
+            }
+        </script>
+        
+</body>
+</html>
