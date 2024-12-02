@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(115, 156, 156);
+    width: 100%;
+    height: 100%;
+}
+
+div{
+    background-color:rgb(212, 197, 226);
+    width: 300px;
+    height: 190px;
+    margin: 200px auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1px ;
+    
+}
+
+input{
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+    height: 30px;
+    border-radius: 25px;
+    font-family: Verdana;
+}
+h3{
+    font-family: Verdana;
+    
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindões</title>
+</head>
+<body>
+    <div>
+        <h3>Login</h3>
+        <input type="text" placeholder="Login" id="login">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="submit" value="Enviar" id="enviar" onclick="logar(); return false">
+    </div>
+    
+        <script>
+            function logar() {
+                var login = document.getElementById('login').value;
+                var senha = document.getElementById('senha').value;
+        
+                // Dados de login e senha válidos
+                const dados = {
+                    "andre": "andre",
+                    "joao": "joao",
+                    "joaquim": "joaquim",
+                    "edvaldo": "edvaldo",
+                    "guilherme": "guilherme"
+                };
+        
+                // Verifica se o login existe e se a senha é correta
+                if (dados[login] && dados[login] === senha) {
+                    alert('Login realizado com sucesso!');
+                    location.href = "home.html";
+                } else {
+                    alert('Usuário ou senha incorretos');
+                }
+            }
+        </script>
+        
+</body>
+</html>
